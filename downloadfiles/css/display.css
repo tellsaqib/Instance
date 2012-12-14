@@ -1,0 +1,278 @@
+html
+{
+   height:100%;
+}
+.blockLink
+{
+   background: #FFF4A6;
+   color: #514721;
+   padding:5px;
+   text-decoration:none;
+   font-size:13px;
+}
+.blockLink:hover
+{
+   text-decoration:underline;
+}
+body
+{
+   height: 99%;
+   font-size: 12px;
+   font-family:Arial,sans-serif;
+   font-size:12px;
+}
+#wrapper {
+   width:1000px;
+   height:600px;
+   padding: 2px;
+   margin: 2px;
+}
+#toolPanel {
+   background: #FFF4A6;
+   margin-bottom: 3px;
+   border: 1px solid #FFD129;
+   padding-top: 6px;
+   float: left;
+   display: block;
+   width: 100%;
+   height: 80px;
+   -moz-border-radius: 10px;
+   -webkit-border-radius: 10px;
+}
+.toolPanelIcon
+{
+   padding:5px;
+   border:1px solid transparent;
+}
+.toolPanelIcon:hover
+{
+   border:1px solid #514721;
+}
+#workingPanel
+{
+   height:85%;
+   width: 100%;
+   overflow:auto;
+}
+.button {
+   background-color: #50A029;
+   padding: 3px 0px;
+   font-weight: bold;
+   min-width:100px;
+   height:28px;
+   font-size:11px;
+   color: #FFFFFF;
+   -moz-border-radius: 2px;
+   -webkit-border-radius: 2px;
+   cursor: pointer;
+   text-align:center;
+   display:inline-block;
+   border:none;
+   font-family: Georgia,'Times New Roman',times,serif;
+}
+
+.button:hover
+{
+   background-color:#C6D880;
+
+}
+.deleteButton:hover
+{
+   background-color:#8a1f11 !important;
+}
+.menuButton
+{
+   display: block;
+   background-color: #50A029;
+   padding: 5px 0px 5px 0px;
+   font-weight: bold;
+   width: 150px;
+   height:12px;
+   color: #FFFFFF;
+   -moz-border-radius: 2px;
+   -webkit-border-radius: 2px;
+   cursor: pointer;
+   text-align:center;
+}
+.hide
+{
+   display:none;
+}
+
+.hiddenMenu  ul {
+   display: none;
+   position: relative;
+   z-index: 100;
+   list-style: none;
+}
+
+.hiddenMenu:hover  ul {
+   display: block;
+}
+
+.hiddenMenu  ul li{
+   text-align: left;
+   border-bottom: 1px solid #50A029;
+   text-indent: 4px;
+   background:#A0DF82;
+   line-height: 180%;
+   width: 150px;
+   cursor: pointer;
+}
+
+.hiddenMenu  ul li:hover {
+   background: #66FF99;
+}
+#statusMenuButton
+{
+   position:absolute;
+   top:50px;
+}
+#statusMenuButton, #statusMenuUl li
+{
+   width:612px;
+   overflow:hide;
+   text-align:left;
+   text-indent:5px;
+}
+#statusMenuUl
+{
+   margin-top:22px;
+   max-height:600px;
+   overflow:auto;
+}
+.clear {
+   clear: both;
+}
+
+.fltrt {
+   float: right;
+   margin-right: 4px;
+}
+
+.fltlft {
+   float: left;
+   margin-left: 4px;
+}
+.delImg
+{
+   padding:5px 3px;
+   vertical-align:text-bottom;
+
+}
+.delImg:hover
+{
+   background-color:#FBE3E4;
+}
+
+.distance
+{
+   padding-left:5px;
+   display:block;
+   float:left;
+}
+
+.bigDistance
+{
+   padding-left:50px;
+   display:block;
+   float:left;
+}
+.infoBlock
+{
+   display:inline-block;
+}
+.infoBlock:hover .infoBar
+{
+   display:block;
+}
+.infoBar
+{
+   display:none;
+   position:absolute;
+   background: #FFF4A6;
+   border: 1px solid #FFD129;
+   color: #514721;
+   padding:3px;
+   width:200px;
+   font-weight:normal;
+}
+
+.beforeInputLabel
+{
+   margin-left:4px;
+   display:inline-block;
+}
+
+.afterInputLabel
+{
+
+}
+.nestedFields
+{
+   margin-left:10px;
+}
+br
+{
+   clear:both;
+}
+hr
+{
+   color: #50A029;
+}
+.bigger
+{
+   font-size:14px;
+   font-weight:bold;
+   padding:8px;
+   color: #50A029;
+   display:inline-block;
+}
+.simpleList
+{
+   list-style-position:outside;
+   list-style-type:disc;
+}
+.simpleList li
+{
+   margin-top:3px;
+}
+.marginTop {
+   margin-top: 5px;
+}
+.marginLeft{
+   margin-left: 7px;
+}
+
+.distanceTable
+{
+   border-spacing:3pt;
+   border-collapse:separate;
+}
+#closeTab
+{
+   background:transparent;
+   position:absolute;
+   padding:2px 4px;
+   right:15px;
+   float:right;
+}
+#closeTab:hover
+{  
+   background-color:#FBE3E4;
+}
+#tooltip
+{   
+   background: #FFF4A6;
+   border: 1px solid #FFD129;
+   color: #514721;
+   padding:3px;
+   width:200px;
+   padding:5px;
+   position:absolute;
+   z-index:3000;
+}
+#tooltip h3
+{
+   font-weight:normal;
+}

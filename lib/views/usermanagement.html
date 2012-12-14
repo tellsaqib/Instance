@@ -1,0 +1,57 @@
+<div id="userManagementBox">
+   <form id="saveUserManagementForm">
+      <div class="fltlft" align="left">
+         <h3>User Management Settings</h3>
+         <br /><label class="afterInputLabel"><input type="checkbox" id="enableUserManagement" />Enable User Management</label>
+         <div class="hide marginLeft" id="userManagementOptionDiv" >
+            <br /><label class="afterInputLabel"><input type="checkbox" id="enableMultiLevelUserManagement" />Enable Multi-Level User Management</label>
+            <br /><label class="afterInputLabel"><input type="checkbox" id="userProfilePage" />User Profile Page</label>
+            <br /><label class="afterInputLabel"><input type="checkbox" id="userGroups" />User Groups</label>
+         </div>
+      </div>
+      <div class="bigDistance" align="left">
+         <h3>Fields</h3> <a href="javascript:" id="addUserField" class="blockLink">Add Field</a>
+         <div id="userManagementFieldsDiv">
+            <table id="userManagementFieldsTable" class="distanceTable" >
+               <thead align="center">
+                  <th>Field Name</th>
+                  <th>Input</th>
+                  <th>Store</th>
+                  <th>Visual</th>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td><input type="text" name="userFieldName[]"/></td>
+                     <td>
+                        <select name="userFieldInput[]">
+                           <option value="1">Text</option>
+                           <option value="2">Select Box</option>
+                           <option value="3">Radio Buttons</option>
+                           <option value="4">CheckBox</option>
+                        </select>
+                     </td>
+                     <td>
+                        <select name="userFieldStore[]">
+                           <option value="1">Number</option>
+                           <option value="2" title="les than 100 Characters">Small Text</option>
+                           <option value="3">Big Text</option>
+                        </select>
+                     </td>
+                     <td>
+                        <select name="userFieldVisual[]">
+                           <option value="1">Single Line Text</option>
+                           <option value="2">Big Text</option>
+                           <option value="3">Google Map</option>
+                           <option value="4">Custom</option>
+                        </select>
+                     </td>
+                     <td><img alt="Delete" class="deleteUserField" src="images/action_delete.gif"/></td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </div>
+      <br />
+      <input type="submit" id="saveUserManagementButton" name="saveUserManagementButton" class="button" value="Save" />
+   </form>
+</div>

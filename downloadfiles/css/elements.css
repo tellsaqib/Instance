@@ -1,0 +1,118 @@
+.blockLink
+{
+   background: #FFF4A6;
+   color: #514721;
+   padding:5px;
+   text-decoration:none;
+   font-size:13px;
+}
+.blockLink:hover
+{
+   text-decoration:underline;
+}
+
+.button {
+   background-color: #50A029;
+   padding: 3px 0px;
+   font-weight: bold;
+   min-width:100px;
+   height:28px;
+   font-size:11px;
+   color: #FFFFFF;
+   -moz-border-radius: 2px;
+   -webkit-border-radius: 2px;
+   cursor: pointer;
+   text-align:center;
+   display:inline-block;
+   border:none;
+   font-family: Georgia,'Times New Roman',times,serif;
+}
+
+.button:hover
+{
+   background-color:#C6D880;
+
+}
+
+.clear {
+   clear: both;
+}
+
+.fltrt {
+   float: right;
+   margin-right: 4px;
+}
+
+.fltlft {
+   float: left;
+   margin-left: 4px;
+}
+
+.distance
+{
+   margin-left:10px;
+}
+
+.bigDistance
+{
+   margin-left:50px;
+}
+
+br
+{
+   clear:both;
+}
+
+.bigger
+{
+   font-size:14px;
+   font-weight:bold;
+   padding:8px;
+   color: #50A029;
+   display:inline-block;
+}
+.simpleList
+{
+   list-style-position:outside;
+   list-style-type:disc;
+}
+.simpleList li
+{
+   margin-top:3px;
+}
+.marginTop {
+   margin-top: 5px;
+}
+.marginLeft{
+   margin-left: 7px;
+}
+.borderAround
+{
+   border:1px solid #eee;
+}
+#navigation
+{
+   margin:15px;
+   padding:10px;
+   border:2px solid #CCCCCC;
+}
+#navigation a
+{
+   font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: #ECF3D5;
+	background-color: #8FB700;
+	display: inline;
+	border: 1px solid #ECF3D5;
+	text-decoration: none;
+	padding: 5px;
+	text-align:center;
+   display:inline-block;
+   width:100px;
+}
+#navigation a:hover
+{
+   background-color:#FFCC00;
+	color:#000000;
+}

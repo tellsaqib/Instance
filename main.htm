@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Project Instance (beta)</title>
+      <link rel="stylesheet" type="text/css" media="all" href="main_files/screen.css">
+      <link rel="shortcut icon" href="./favicon.ico">
+   </head>
+   <body>
+      <div id="main"><!-- main container, contains all -->
+         <div id="logo">
+            <img src="main_files/logo.png" id="logo" />
+            <div id="headerText">For Developers By Developers</div>
+         </div>
+         <div id="navigation">
+            <ul id="menu">
+               <li id="nav1" class="selected"><a href="#"><span class="supernav">Home</span><span class="subnav">Project Home Page</span></a></li>
+               <li id="nav2"><a href="javascript:" ><span class="supernav">About us</span><span class="subnav">Who we are?</span></a></li>
+               <li id="nav3"><a href="javascript:" ><span class="supernav">How it works</span><span class="subnav">Some demonstration of working</span></a></li>
+               <li id="nav4"><a href="javascript:" ><span class="supernav">Future Plans</span><span class="subnav">Features to be added</span></a></li>
+               <li id="nav5"><a href="index.html"><span class="supernav">IDE</span><span class="subnav">Lets Explore the real thing</span></a></li>
+            </ul>
+         </div><!-- end navigation -->
+         <div>
+            <div id="content">
+            </div>
+         </div>
+         <div id="footer">
+            <a href="#">IDE</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Weblog</a>
+            <a href="#">Contact Us</a>
+         </div><!-- end footer -->
+      </div><!-- end main -->
+      <div id="extras" style="display:none;" >
+         <div id="home">
+            <span class="normalText">
+               <span class="imp">Instance</span> is a web application generator that works using an interactive online UI.
+               This application is designed for rapidly developing robust database, forms, and reporting applications.
+               The application supports large projects for any enterprise or departmental system.
+
+               <ul style="margin-left:30px;">
+                  <li>Speed application development and deployment</li>
+                  <li>Dramatically reduce development costs</li>
+                  <li>High quality code reduces testing time</li>
+                  <li>Focus developers on higher priority tasks</li>
+               </ul>
+            </span>
+         </div>
+         <div id="howitworks">
+            <embed type="application/x-mplayer2"
+                   pluginspage="http://www.microsoft.com/Windows/MediaPlayer/"
+                   src="intro.avi" name="MediaPlayer1"
+                   width="800" height="600"
+                   style="position:relative;top:-30px;left:100px;" />
+                   <!--autostart="1" showcontrols="1"-->
+         </div>
+         <div id="aboutus">
+            <span class="normalText">
+               <span class="imp">
+                  <ul style="margin-left:30px;">
+                     <li>Najm Us Saqib</li>
+                     <li>Muhammad Owais</li>
+                     <li>Shakaib Haider</li>
+                  </ul>
+               </span>
+            </span>
+         </div>
+         <div id="future" >
+            <span class="normalText">
+               <span class="imp">
+                  We are very intended to include these features as early as possible.
+               </span>
+               <ul style="margin-left:30px;">
+                  <li>Multi-user environment</li>
+                  <li>Multi-project environment</li>
+                  <li>Interactive Page Design</li>
+                  <li>Local data storage (may be using <a href="http://gears.google.com" target="_blank">Google Gears</a>)</li>
+               </ul>
+            </span>
+         </div>
+      </div>
+
+      <script src="jscript/lib/jquery-1.2.6.js" type="text/javascript" ></script>
+      <script type="text/javascript">
+         $(document).ready(function()
+         {
+            $('#content').slideToggle(1100,function()
+            {
+               $('#content').html($('#home').html());
+               $('#content').slideToggle(1100);
+            });
+            $('#nav1').bind('click',{to:'home'},changeContentTo);
+            $('#nav2').bind('click',{to:'aboutus'},changeContentTo);
+            $('#nav3').bind('click',{to:'howitworks'},changeContentTo);
+            $('#nav4').bind('click',{to:'future'},changeContentTo);
+         });
+
+         function changeContentTo(e)
+         {
+            $('.selected').removeClass('selected');
+            $(this).addClass('selected');
+            $('#content').slideToggle(1100,function()
+            {
+               $('#content').html($('#' + e.data.to).html());
+               $('#content').slideToggle(1100);
+            });
+         }
+
+      </script>
+   </body>
+</html>

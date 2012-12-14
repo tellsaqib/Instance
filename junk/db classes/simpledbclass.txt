@@ -1,0 +1,59 @@
+class DB {
+
+   function DB() {
+
+       $this->host = "";
+
+       $this->db = "";
+
+       $this->user = "";
+
+       $this->pass = "";
+
+       $this->link = mysql_connect($this->host, $this->user, $this->pass) or die("Database connection failed. Please check your details.");
+
+       mysql_select_db($this->db);
+
+   }
+
+   function query($query) {
+
+       $result = mysql_query($query, $this->link) or print($query . ', ' . mysql_error());
+
+       return $result;
+
+   }
+
+   function fetcharray($query) {
+
+       $result = $this->query($query);
+
+       $result = mysql_fetch_assoc($result);
+
+       return $result;
+
+   }
+
+   function numrows($query) {
+
+       $result = $this->query($query);
+
+       $result = mysql_num_rows($result);
+
+       return $result;
+
+   }
+
+   function close() {
+
+       mysql_close($this->link);
+
+   }
+
+}
+
+
+
+$link = new DB;
+
+$link->DB; 

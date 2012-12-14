@@ -1,0 +1,112 @@
+<div id="saveModuleBox">
+   <div id="moduleTemplates">
+      You may select one of these Templates to automatically customize settings.
+      <select id="moduleTemplatesSelect">
+         <option>Select Template</option>
+         <option value="Blog">Blog</option>
+         <option value="Forum">Forum</option>
+         <option value="Shopping Cart">Shopping Cart</option>
+         <option value="Directory">Directory</option>
+         <option value="Directory">FAQs</option>
+         <option value="Directory">Polls</option>
+      </select>
+   </div>
+   <hr>
+   <form id="saveModuleForm">
+      <div class="fltlft" align="left">
+         <h3>Module Settings</h3>
+         <input type="hidden" name="moduleID" id="moduleID" />
+         <br /><label class="beforeInputLabel">Name</label>
+         <br /><input type="text" id="moduleName" name="moduleName"  class="required" />
+         <br /><label class="afterInputLabel"><input type="checkbox" id="moduleCategories" name="moduleCategories"/>Categories</label>
+         <div class="hide nestedFields" id="categriesOptionDiv">
+            <label class="afterInputLabel"><input type="checkbox" id="moduleNestedCategories" name="moduleNestedCategories" />Nested Categories</label>
+         </div>
+         <br /><label class="afterInputLabel"><input type="checkbox" id="moduleTags" name="moduleTags" />Tags</label>
+         <br /><label class="afterInputLabel"><input type="checkbox" id="moduleComments" name="moduleComments" />Comments</label>
+         <div class="hide nestedFields" id="commentsOptionDiv">
+            <label class="afterInputLabel"><input type="checkbox" id="moduleNestedComments" name="moduleNestedComments"/>Nested Comments</label>
+         </div>
+         <br /><label class="afterInputLabel"><input type="checkbox" id="moduleItemRating" name="moduleItemRating" />Item Rating</label>
+         <br /><label class="afterInputLabel"><input type="checkbox" id="moduleStatistics" name="moduleStatistics" />Statistics</label>
+      </div>
+      <div class="bigDistance" align="left">
+         <h3>Fields</h3> <a href="javascript:" id="addModuleField" class="blockLink" >Add Field</a>
+         <div id="moduleFieldsDiv">
+            <table id="moduleFieldsTable" class="distanceTable">
+               <thead align="center">
+                  <th>Field Name</th>
+                  <th>
+                     <div class="infoBlock fltlft">
+                        Input&nbsp;<!-- <img src="images/info.png" alt="info" width="20" height="20" /> -->
+                        <div class="infoBar">How this field's input will be taken in the form</div>
+                     </div>
+                  </th>
+                  <th>
+                     <div class="infoBlock fltlft">
+                        Store&nbsp;<!-- <img src="images/info.png" alt="info" width="20" height="20" /> -->
+                        <div class="infoBar">What type of data storage will be used in the DB to store this field</div>
+                     </div>
+                  </th>
+                  <th>
+                     Visual&nbsp;<!-- <img src="images/info.png" alt="info" width="20" height="20"
+                                      title="How this field will be displayed."/> -->
+                  </th>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td><input type="text" name="moduleFieldName[]" class="required"/></td>
+                     <td>
+                        <select name="moduleFieldInput[]">
+                           <option value="Text">Text</option>
+                           <option value="SelectBox">Select Box</option>
+                           <option value="RadioButtons">Radio Buttons</option>
+                           <option value="CheckBox">CheckBox</option>
+                           <option value="HTMLEditor">HTML Editor</option>
+                        </select>
+                     </td>
+                     <td>
+                        <select name="moduleFieldStore[]">
+                           <option value="Number">Number</option>
+                           <option value="SmallText" title="less than 100 Characters">Small Text</option>
+                           <option value="BigText">Big Text</option>
+                        </select>
+                     </td>
+                     <td>
+                        <select name="moduleFieldVisual[]">
+                           <option value="None">None</option>
+                           <option value="SingleLineText">Single Line Text</option>
+                           <option value="BigText">Big Text</option>
+                           <option value="GoogleMap">Google Map</option>
+                           <option value="Custom">Custom</option>
+                        </select>
+						<img src="images/setting.png" />
+                     </td>
+                     <td><img alt="Delete" class="deleteModule delImg" src="images/action_delete.gif"/></td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </div>
+      <div class="bigDistance marginTop">
+         <br /><br /><br /><input type="button" id="saveModuleButton" class="button" value="Save" />
+         <br /><br /><input type="button" id="commitModuleButton" class="button" value="Commit Module"/>
+         <br /><br /><input type="button" id="deleteModuleButton"
+                            class="button deleteButton hide" value="Delete Module" />
+      </div>
+      <br />
+      <div id="commitResultsDiv" class="hide">
+         <hr />
+         <div class="fltlft">
+            <h3>Following Pages are created by this Module.</h3>
+            <ul id="commitPapesUl" class="simpleList">
+            </ul>
+         </div>
+         <div class="fltlft">
+            <h3>Following Tables are created by this Module.</h3>
+            <ul id="commitTablesUl" class="simpleList marginLeft">
+            </ul>
+         </div>
+      </div>
+   </form>
+</div>

@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <title>Instance</title>
+      <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+      <link href="css/style.css" rel="stylesheet" type="text/css" />
+      <link href="css/forms.css" rel="stylesheet" type="text/css" />
+   </head>
+   <body>
+      <div id="wrapper" >
+         <div id="toolPanel">
+            <div class="hiddenMenu fltlft">
+               <div class="menuButton">Modules</div>
+               <ul id="moduleNameUl">
+                  <li id="addModule"><img src="images/add.png" alt="add" />&nbsp;New Module</li>
+               </ul>
+            </div>
+            <!--<div class="hiddenMenu fltlft">
+               <div class="menuButton">Add To Page</div>
+               <ul>
+                  <li id="div">Div</li>
+                  <li id="textbox">Text Box</li>
+                  <li id="form">Form</li>
+                  <li id="selectBox">Select Box</li>
+               </ul>
+            </div>-->
+            <div class="hiddenMenu fltlft">
+               <div class="menuButton">Pages</div>
+               <ul id="pageNameUl">
+                  <li id="addPage"><img src="images/add.png" alt="add" />&nbsp;New Page</li>
+               </ul>
+            </div>
+            <div class="hiddenMenu fltlft">
+               <div class="menuButton">Tables</div>
+               <ul id="dbTableNameUl">
+                  <li id="addTable"><img src="images/add.png" alt="add" />&nbsp;New Table</li>
+               </ul>
+            </div>
+            <div class="hiddenMenu fltlft">
+               <div class="menuButton">Components</div>
+               <ul>
+                  <li id="addComponent"><img src="images/add.png" alt="add" />&nbsp;New Component</li>
+               </ul>
+            </div>
+            <div class="fltrt">
+               <img src="images/globe.png" id="globalVars" alt="global varibles" width="20" class="toolPanelIcon" />
+               <a href="javascript:" ><img src="images/user.gif" id="userManagement" alt="user management" width="20" class="toolPanelIcon" /></a>
+               <a href="javascript:" ><img src="images/download.gif" id="download" class="toolPanelIcon" alt="Download Code" width="20" /></a>
+               <a href="php/resetproject.php" id="resetProject"><img src="images/reset.gif" id="reset" class="toolPanelIcon" alt="Reset Project" width="20" /></a>
+            </div>
+            <br  />
+            <div id="statusMenu" class="hiddenMenu fltlft marginTop">
+               <div class="menuButton" id="statusMenuButton"></div>
+               <ul id="statusMenuUl">
+               </ul>
+            </div>
+         </div>
+         <br class="clear" />
+         <div id="workingPanel">
+            <ul id="tabsUl">
+               <li><a href="#homeTab"><span>Home</span></a></li>
+            </ul>
+            <img src="images/close.gif" alt="Close Tab" id="closeTab" width="25" height="25" />
+            <div id="homeTab"><!--<iframe src="main.htm" width="100%" height="100%" ></iframe>-->Some Static content for now.</div>
+         </div>
+      </div>
+      <script src="jscript/lib/jquery-1.2.6.js" type="text/javascript"></script>
+      <script src="jscript/lib/appenddom.js" type="text/javascript" ></script>
+      <script src="jscript/lib/livequery.js" type="text/javascript" ></script>
+      <script src="jscript/lib/ui.core.js" type="text/javascript"></script>
+      <script src="jscript/lib/ui.tabs.js" type="text/javascript" ></script>
+      <script src="jscript/lib/validation.js" type="text/javascript" ></script>
+      <script src="jscript/lib/tooltip.js" type="text/javascript" ></script>
+      <script src="jscript/lib/tree.js" type="text/javascript" ></script>
+      <script src="jscript/lib/ui.dialog.js" type="text/javascript" ></script>
+
+      <script src="jscript/element.js" type="text/javascript" ></script>
+      <script src="jscript/page.js" type="text/javascript" ></script>
+      <script src="jscript/module.js" type="text/javascript" ></script>
+      <script src="jscript/dbtable.js" type="text/javascript" ></script>
+      <script src="jscript/component.js" type="text/javascript" ></script>
+      <script src="jscript/usermanagement.js" type="text/javascript" ></script>
+      <script src="jscript/globalvars.js" type="text/javascript" ></script>
+      <script src="jscript/download.js" type="text/javascript" ></script>
+
+      <script src="jscript/include.js" type="text/javascript" ></script>
+      <script src="jscript/util.js" type="text/javascript" ></script>
+      <div id="dialogs" class="hide">
+         <div id="commitModuleDialogue" title="Commit Module Settings">
+            <form id="commitModuleForm" name="commitModuleForm" >
+               <div class="fltlft" align="left">
+                  <br /><b>Listing Style</b>
+                  <br /><label for="forumType">
+                     <input type="radio" name="listingStyle" id="forumType" value="forumType" />Forum Type
+                  </label>
+                  <br /><label for="table">
+                     <input type="radio" name="listingStyle" id="table" value="table"/>Table
+                  </label>
+                  <br /><label for="shortDescription">
+                     <input type="radio" name="listingStyle" id="shortDescription" value="shortDescription" checked />Short Description
+                  </label>
+                  <br /><br />
+                  <label for="enablePagination">
+                     <input type="checkbox" name="enablePagination" id="enablePagination" checked />Enable Pagination
+                  </label>
+               </div>
+               <div class="bigDistance" align="left">
+                  <br /><label><input type="checkbox" name="showCategories" id="showCategories" class="hidden" checked />Show Categories</label>
+                  <br /><label><input type="checkbox" name="showTags" id="showTags" class="hidden" checked />Show Tags</label>
+                  <br /><label><input type="checkbox" name="showItemRating" id="showItemRating" class="hidden" checked />Show Item Rating</label>
+                  <br /><br /><b>Which fields to show in list</b>
+                  <br /><select multiple id="fieldsInListSelect" name="fieldInListSelect[]"></select>
+               </div>
+               <div class="bigDistance" align="left">
+                  <br /><label for="separateDetailPage">
+                     <input type="checkbox" name="separateDetailPage" id="separateDetailPage" checked />Separate Detail  Page
+                  </label>
+                  <div id="detailPageOptionsDiv" class="nestedFields">
+                     <br /><b>Detail Page Style</b>
+                     <br /><label><input type="radio" name="detailPageStyle" id="userProfile" />User Profile</label>
+                     <br /><label><input type="radio" name="detailPageStyle" id="ProductDetail" />Product Detail</label>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </body>
+</html>

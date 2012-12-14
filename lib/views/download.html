@@ -1,0 +1,40 @@
+<div id="downloadBox">
+   <h3>Download Options</h3>
+   <br />Select the download options and press Download button to Get your code.
+   <hr />
+   <form id="downloadForm">
+      <div class="fltlft" align="left">
+         <h3>Java Script Options</h3>
+         <br /><label><input type="checkbox" name="compressJavaScript" checked>Compress JavaScript</label>
+         <br /><br /><b>JavaScript file package</b>
+         <br /><label><input type="radio" name="javaScriptOption" value="all" checked>All JavaScript Files</label>
+         <br /><label><input type="radio" name="javaScriptOption" value="required">Required JavaScript Files</label>
+         <br /><label><input type="radio" name="javaScriptOption" id="selectedJavaScript" value="selected">Selected JavaScript Files</label>
+         <div id="javaScriptFiles" class="hide nestedFields">
+            <br /><label><input type="checkbox" name="JQuery">JQuery</label>
+            <br /><label><input type="checkbox" name="JQueryUI">JQuery UI</label>
+            <br /><label><input type="checkbox" name="util">Utils.js</label>
+         </div>
+      </div>
+      <div class="bigDistance fltlft" align="left">
+         <h3>CSS Options</h3>
+         <br /><label><input type="checkbox" name="compressCSS" checked>Compress CSS</label>
+         <br /><br /><b>CSS file package</b>
+         <br /><label><input type="radio" name="CSSOption" value="all" checked>All CSS</label>
+         <br /><label><input type="radio" name="CSSOption" value="required">Required CSS</label>
+         <br /><label><input type="radio" name="CSSOption" id="selectedCSS" value="selected">Selected CSS</label>
+         <div id="cssFiles" class="hide nestedFields">
+            <br /><label><input type="checkbox" name="resetCSS">Reset CSS</label>
+            <br /><label><input type="checkbox" name="gridCSS">Grid CSS</label>
+            <br /><label><input type="checkbox" name="typographyCSS">Typography CSS</label>
+            <br /><label><input type="checkbox" name="formsCSS">Forms CSS</label>
+            <br /><label><input type="checkbox" name="elementsCSS">Elements CSS</label>
+            <br /><label><input type="checkbox" name="ieCSS">IE CSS</label>
+            <br /><label><input type="checkbox" name="dropDownMenuCSS">Drop Down Menu CSS</label>
+            <br /><label><input type="checkbox" name="printCSS">Print CSS</label>
+            <br /><label><input type="checkbox" name="raterCSS">Rater CSS</label>
+         </div>
+      </div>
+      <input type="button" class="button bigDistance" id="downloadButton" value="Download Code" />
+   </form>
+</div>

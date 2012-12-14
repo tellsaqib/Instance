@@ -1,0 +1,40 @@
+ul.dropdown, ul.dropdown li, ul.dropdown ul {
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+margin:0;
+padding:0;
+}
+ul.dropdown {
+float:left;
+position:relative;
+z-index:597;
+}
+ul.dropdown li {
+float:left;
+line-height:1.3em;
+vertical-align:middle;
+}
+ul.dropdown li.hover, ul.dropdown li:hover {
+cursor:default;
+position:relative;
+z-index:599;
+}
+ul.dropdown ul {
+left:0;
+position:absolute;
+top:100%;
+visibility:hidden;
+width:100%;
+z-index:598;
+}
+ul.dropdown ul li {
+float:none;
+}
+ul.dropdown ul ul {
+left:99%;
+top:1px;
+}
+ul.dropdown li:hover > ul {
+visibility:visible;
+}

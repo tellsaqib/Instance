@@ -1,0 +1,41 @@
+<div id="saveDBTableBox" >
+   <form id="saveDBTableForm">
+      <div class="fltlft" align="left">
+         <h3>Table Settings</h3>
+         <input type="hidden" name="dbTableID" id="dbTableID" />
+         <br /><label class="beforeInputLabel">Name</label>
+         <br /><input type="text" id="dbTableName" name="dbTableName" class="required" />
+         <br /><label class="beforeInputLabel">Key Field Name</label>
+         <br /><input type="text" id="keyFieldName" name="keyFieldName" class="required"/>
+      </div>      
+      <div class="bigDistance" align="left" id="fieldsDiv">
+         <h3>Table Fields</h3> <a id="addDBTableField" href="javascript:" class="blockLink">Add Another</a>
+         <div id="dbTableFieldsDiv">
+            <table id="dbTableFieldsTable" class="distanceTable">
+               <thead align="center">
+                  <th>Field Name</th>
+                  <th>Field Type</th>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td><input type="text" name="dbTableFieldName[]" class="required" /></td>
+                     <td>
+                        <select name="dbTableFieldType[]">
+                           <option value="Number">Number</option>
+                           <option value="SmallText" title="les than 100 Characters">Small Text</option>
+                           <option value="BigText">Big Text</option>
+                        </select>
+                     </td>
+                     <td><img alt="Delete" class="deleteField delImg" src="images/action_delete.gif"/></td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </div>
+      <div class="bigDistance marginTop" >
+         <br /><br /><br /><input type="button" id="saveTableButton" class="button" value="Save" />
+         <br /><br /><input type="button" type="button" id="deleteDBTableButton"
+                 class="button deleteButton hide" value="Delete Table" />
+      </div>
+   </form>
+</div>
