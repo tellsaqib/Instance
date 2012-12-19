@@ -12,3 +12,5 @@ Instance is a PHP based web application generator that works using an interactiv
 * High quality code with reduced testing time
 
 * Lets the developers focus on higher priority tasks
+
+![](http://github.com/tellsaqib/Instance/blob/master/instance-ui.jpg)
